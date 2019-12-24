@@ -19,7 +19,8 @@
 |password|string|null: false|
 
 ### Association
-- has_many :group
+- has_many :groups_users
+- has_many :group, through: :groups_users
 - has_many :massage
 
 
@@ -30,7 +31,8 @@
 |title|text|null: false|
 
 ### Association
-- has_many :user
+- has_many :groups_users
+- has_many :user, through: :groups_users
 - has_many :massage
 
 
