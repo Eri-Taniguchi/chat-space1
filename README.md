@@ -20,20 +20,20 @@
 
 ### Association
 - has_many :groups_users
-- has_many :group, through: :groups_users
-- has_many :massage
+- has_many :groups, through: :groups_users
+- has_many :messages
 
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :groups_users
-- has_many :user, through: :groups_users
-- has_many :massage
+- has_many :users, through: :groups_users
+- has_many :messages
 
 
 ## massagesテーブル
@@ -42,8 +42,8 @@
 |------|----|-------|
 |user_id|integer|foreign_key:true|
 |group_id|integer|foreign_key:true|
-|body|text|null: false|
-|image|string|null:false|
+|body|text||
+|image|string||
 
 ### Association
 - belongs_to :user
